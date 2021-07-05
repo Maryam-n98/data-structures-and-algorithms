@@ -13,6 +13,7 @@ public class LinkedList {
         head =newNode;
     }
 
+
     public void show() {
         Node newOne = head;
         while(newOne != null) {
