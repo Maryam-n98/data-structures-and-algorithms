@@ -6,9 +6,9 @@ In this Challenge, We had Node and LinkedList that applied some methods to displ
 finally, the results should be string.
 
 ## Approach & Efficiency
-•    Verify Big O(1) of written code.
-•    Verify code matches algorithm.
-•    Explain testing according to inputs and outputs.
+-   Verify Big O(1) of written code.
+-    Verify code matches algorithm.
+-    Explain testing according to inputs and outputs.
 
 ## API
 insert()
