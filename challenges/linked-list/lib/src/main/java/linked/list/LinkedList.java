@@ -24,12 +24,11 @@ public class LinkedList {
 
     public boolean search(Node head, int element) {
         Node newOne = head;
-        while (newOne != null) {
-            if (newOne.value == element) {
-                System.out.println("its include");
+
+        while (newOne != null)
+        {
+            if (newOne.getValue() == element){
                 return true;
-            }else{
-                System.out.println("false");
             }
             newOne = newOne.next ;
         }
