@@ -1,14 +1,11 @@
 # Singly Linked List
-A linked list is a way to store a collection of elements. Like an array, these can be characters or integers. Each element in a linked list is stored in the form of a node.
-
+A linked list is a linear collection of data elements whose order is not given by their physical placement in memory. Instead, each element points to the next. It is a data structure consisting of a collection of nodes which together represent a sequence.
 ## Challenge
 In this Challenge, We had Node and LinkedList that applied some methods to display the values of our Nodes inside the LinkedList according to their addresses by inserting a new one instead of the first node that took the head place and tests some values if there are inside our nodes or not by the boolean method that gives us true or false.
 finally, the results should be string.
 
 ## Approach & Efficiency
--   Verify Big O(1) of written code.
--    Verify code matches algorithm.
--    Explain testing according to inputs and outputs.
+- Big O (1).
 
 ## API
 insert()
