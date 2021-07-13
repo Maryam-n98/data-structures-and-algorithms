@@ -10,29 +10,23 @@ public class Library {
     }
 
     public static void main(String[] args) {
-//        for test main
-        System.out.println("maryam");
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.insert(1);
+        linkedList.insert(2);
+        linkedList.insert(3);
+        System.out.println(linkedList);
+        linkedList.append(8);
+        linkedList.append(10);
+        System.out.println(linkedList);
+        linkedList.insertAfter(2 , 6);
+        System.out.println(linkedList);
+        linkedList.insertBefore(2 , 5);
+        System.out.println(linkedList);
+        linkedList.insertBefore(3 , 5);
 
-        LinkedList linkedList = new LinkedList(new Node(1,null));
-        linkedList.insert(new Node(2,null));
-        linkedList.insert(new Node(3,null));
-        linkedList.insert(new Node(4,null));
-//        System.out.println(linkedList);
-        linkedList.show();
-//        4 include so it will print true
-        if(linkedList.search(linkedList.head,4)){
-            System.out.println("True");
-        }else{
-            System.out.println("False");
-        }
-//        5 it not include so it will print false
-        if(linkedList.search(linkedList.head,5)){
-
-            System.out.println("True");
-        }else{
-            System.out.println("False");
-        }
-        System.out.print(linkedList);
+        System.out.println(linkedList);
+//        System.out.println(linkedList.includes(555));
+//        System.out.println(linkedList.head.data);
     }
-    }
+}
 
