@@ -1,53 +1,53 @@
 package linked.list;
-
-public class LinkedList {
-    Node head;
-
-
-    public LinkedList(Node head) {
-        this.head = head;
+public class LinkedList <T>{
+    public Node<T>  head;
+    public int length;
+    public LinkedList() {
+        this.head = null;
     }
 
-    public void insert(Node newNode){
-        newNode.next= head;
-        head =newNode;
-    }
-
-
-    public void show() {
-        Node newOne = head;
-        while(newOne != null) {
-            System.out.println(newOne.value);
-            newOne = newOne.next;
+    public void insert(T data){
+        Node<T> newNode = new Node<>(data);
+        if(this.head == null) {
+            head = newNode;
         }
+        else {
+            Node temp = head;
+            head = newNode;
+            head.next = temp;
+
+        }
+        length++;
+
     }
 
-    public boolean search(Node head, int element) {
-        Node newOne = head;
-
-        while (newOne != null)
-        {
-            if (newOne.getValue() == element){
+    public boolean includes (T key) {
+        Node<T> trav = head;
+        while (trav != null) {
+            if(trav.data.equals(key)){
                 return true;
             }
-            newOne = newOne.next ;
+            trav = trav.next;
         }
         return false;
     }
 
-
-    public String toString(){
-        String result = "";
-        Node newOne = head;
-        while(newOne != null){
-            result +="{";
-            result += newOne.value;
-            result +="}";
-            result += " -> ";
-            newOne = newOne.next;
+    public void clear() {
+        this.head = null;
+        length = 0;
+    }
+    @Override
+    public String toString() {
+        String list = "{ ";
+        Node<T> trav = head;
+        while (trav != null) {
+            list += trav.data + " -> ";
+            trav = trav.next;
         }
-        result += "Null";
-        return result;
+        if (trav == null) {
+            list += trav + " }";
+        }
+        return list;
     }
 }
 
