@@ -25,6 +25,11 @@ public class Library {
         linkedList.insertBefore(3 , 5);
 
         System.out.println(linkedList);
+
+        System.out.println(linkedList.kth(3));
+        System.out.println(linkedList.kth(9));
+        System.out.println(linkedList.kth(-1));
+        System.out.println(linkedList.kth(0));
 //        System.out.println(linkedList.includes(555));
 //        System.out.println(linkedList.head.data);
     }
