@@ -95,5 +95,30 @@ public class LinkedList <T>{
         }
         return list;
     }
+    public T kth(int k){
+        int maxIndex = size - 1;
+        int idxValue = maxIndex - k;
+
+        Node<T> trav = head;
+        int element = 0;
+
+
+        if(k >= size || k < 0){
+            return null;
+        }
+        else if(idxValue == element){
+            return trav.data;
+        }else {
+            while (idxValue != element){
+                trav = trav.next;
+                element++;
+
+            }
+            return trav.data;
+
+        }
+
+    }
+
 }
 

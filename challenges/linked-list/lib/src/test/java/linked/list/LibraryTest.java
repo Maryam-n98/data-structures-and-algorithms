@@ -23,7 +23,7 @@ class LibraryTest {
     public void appendTest() {
         testList.append(5);
         testList.append(5);
-        Assertions.assertTrue( testList.size == 2 );
+        Assertions.assertEquals(2, testList.size);
 
     }
 
@@ -36,9 +36,22 @@ class LibraryTest {
         testList.insertBefore(3 , 5);
         testList.insertAfter(3 , 5);
         Assertions.assertEquals(2 , testList.head.data);
-        Assertions.assertTrue(testList.size == 5);
+        Assertions.assertEquals(5, testList.size);
         Assertions.assertTrue(testList.includes(5) );
         Assertions.assertFalse(testList.includes(9) );
         Assertions.assertEquals("{ 2 -> 5 -> 3 -> 5 -> 5 -> null }" , String.valueOf(testList));
+
+    }
+    @Test
+    public void kthTest(){
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.insert(16);
+        linkedList.insert(15);
+        linkedList.insert(14);
+        linkedList.insert(12);
+        Assertions.assertEquals(4, linkedList.size);
+        Assertions.assertEquals(15,linkedList.kth(1));
+        Assertions.assertNull(linkedList.kth(-1));
+        Assertions.assertNull(linkedList.kth(5));
     }
 }
