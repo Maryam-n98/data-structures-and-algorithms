@@ -54,4 +54,12 @@ class LibraryTest {
         Assertions.assertNull(linkedList.kth(-1));
         Assertions.assertNull(linkedList.kth(5));
     }
+    @Test
+    public void sizeOneOfLinkedList(){
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.insert(7);
+        Assertions.assertEquals(1, linkedList.size);
+        Assertions.assertEquals(7,linkedList.kth(0));
+
+    }
 }
