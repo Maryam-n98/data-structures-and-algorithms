@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static linked.list.LinkedList.zipLists;
+
 class LibraryTest {
     LinkedList<Integer> testList;
     @BeforeEach
@@ -60,6 +62,39 @@ class LibraryTest {
         linkedList.insert(7);
         Assertions.assertEquals(1, linkedList.size);
         Assertions.assertEquals(7,linkedList.kth(0));
+
+    }
+
+
+
+
+    @Test
+    public void listOneLargerThanListTwo(){
+        LinkedList<Integer> linkedList1 = new LinkedList<>();
+        LinkedList<Integer> linkedList2 = new LinkedList<>();
+        linkedList1.insert(1);
+        linkedList1.insert(2);
+        linkedList1.insert(3);
+        linkedList2.insert(4);
+        linkedList2.insert(5);
+        Assertions.assertEquals(3, linkedList1.size);
+        Assertions.assertEquals(2, linkedList2.size);
+        Assertions.assertEquals(5, zipLists(linkedList1, linkedList2).size);
+        Assertions.assertEquals("{ 3 -> 5 -> 2 -> 4 -> 1 -> null }" , zipLists(linkedList1, linkedList2).toString());
+    }
+    @Test
+    public void listTwoLargerThanListOne(){
+        LinkedList<Integer> linkedList1 = new LinkedList<>();
+        LinkedList<Integer> linkedList2 = new LinkedList<>();
+        linkedList1.insert(7);
+        linkedList1.insert(8);
+        linkedList2.insert(6);
+        linkedList2.insert(45);
+        linkedList2.insert(5);
+        Assertions.assertEquals(2, linkedList1.size);
+        Assertions.assertEquals(3, linkedList2.size);
+        Assertions.assertEquals(5, zipLists(linkedList1, linkedList2).size);
+        Assertions.assertEquals("{ 8 -> 5 -> 7 -> 45 -> 6 -> null }" , zipLists(linkedList1, linkedList2).toString());
 
     }
 }
