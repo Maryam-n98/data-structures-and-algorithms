@@ -4,6 +4,8 @@
 package linked.list;
 
 
+import static linked.list.LinkedList.zipLists;
+
 public class Library {
     public boolean someLibraryMethod() {
         return true;
@@ -32,6 +34,21 @@ public class Library {
         System.out.println(linkedList.kth(0));
 //        System.out.println(linkedList.includes(555));
 //        System.out.println(linkedList.head.data);
+
+//        code 08
+        LinkedList<Integer> linkedList1 = new LinkedList<>();
+        LinkedList<Integer> linkedList2 = new LinkedList<>();
+        linkedList1.insert(5);
+        linkedList1.insert(7);
+        linkedList2.insert(9);
+        linkedList2.insert(1);
+        linkedList2.insert(3);
+        linkedList2.insert(4);
+        System.out.println("lis1 "+linkedList1);
+        System.out.println("list2 "+linkedList2);
+        zipLists(linkedList1, linkedList2);
+        System.out.println("zipLists "+zipLists(linkedList1, linkedList2));
+
     }
 }
 

@@ -119,6 +119,30 @@ public class LinkedList <T>{
         }
 
     }
-
+    public static LinkedList zipLists(LinkedList list1, LinkedList list2){
+        Node node1 = list1.head;
+        Node node2 = list2.head;
+        LinkedList zipLists = new LinkedList();
+        int sizeTow;
+        if(list1.size> list2.size){
+            sizeTow = list1.size;
+        }else if(list1.size< list2.size){
+            sizeTow = list2.size;
+        }else{
+            sizeTow = list1.size;
+        }
+        while (sizeTow > 0){
+            if(node1 != null){
+                zipLists.append(node1.data);
+                node1 = node1.next;
+            }
+            if(node2 != null){
+                zipLists.append(node2.data);
+                node2 = node2.next;
+            }
+            sizeTow --;
+        }
+        return zipLists;
+    }
 }
 
