@@ -6,6 +6,8 @@ package stack.and.queue;
 public class App {
         private static final Stack<Integer> stack = new Stack<>();
         private static final Queue<Integer> queue = new Queue<>();
+    private static final stackQueuePseudo<Integer> pseudoQueue = new stackQueuePseudo<>();
+
     public static void main(String[] args) {
         System.out.println("Stack");
         stack.push(45);
@@ -29,5 +31,24 @@ public class App {
         System.out.println(queue.dequeue());
         System.out.println(queue.dequeue());
         System.out.println("is Empty: " + queue.isEmpty());
+// code challenge 11
+        stack.push(1);
+        System.out.println("Code Challenge 11");
+
+        pseudoQueue.enqueue(1);
+        pseudoQueue.enqueue(5);
+        pseudoQueue.enqueue(15);
+        pseudoQueue.enqueue(20);
+        pseudoQueue.enqueue(30);
+        System.out.println(pseudoQueue);
+        System.out.println("dequeue "+pseudoQueue.dequeue());
+        System.out.println("dequeue "+pseudoQueue.dequeue());
+
+
+        System.out.println(pseudoQueue);
+
+        pseudoQueue.enqueue(60);
+        System.out.println(pseudoQueue);
+
     }
 }

@@ -32,7 +32,7 @@ public class Queue <T>{
             this.front = this.front.next;
             temp.next = null;
             size--;
-            return temp.data;
+            return (int) temp.data;
         }
     }
     public int peek() {
@@ -40,7 +40,7 @@ public class Queue <T>{
             System.out.println("Queue is empty");
             return 0;
         } else
-            return front.data;
+            return (int) front.data;
     }
 
     public boolean isEmpty() {
