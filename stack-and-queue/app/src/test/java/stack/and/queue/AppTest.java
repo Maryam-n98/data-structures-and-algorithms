@@ -9,6 +9,7 @@ import static org.junit.Assert.*;
 public class AppTest {
     private static final Stack<Integer> stack = new Stack<>();
     private static final Queue<Integer> queue = new Queue<>();
+    private static stackQueuePseudo<Integer> pseudo = new stackQueuePseudo<>();
     @Test
     public void addStackTest() {
         stack.push(1);
@@ -43,16 +44,50 @@ public class AppTest {
         assertEquals(6,stack.peek());
     }
     @Test
+    public void popEmpty(){
+        assertEquals(0,stack.pop());
+    }
+    @Test
+    public void peekEmpty(){
+        assertEquals(0, stack.peek());
+    }
+    @Test
     public void peekQueue(){
         queue.enqueue(2);
         queue.enqueue(4);
         assertEquals(2,queue.peek());
     }
-
-
     @Test
     public void EmptyStackAndQueue(){
         assertNull(stack.top);
         assertNull(queue.front);
     }
+    @Test
+    public void enqueueTest(){
+
+        pseudo.enqueue(1);
+        assertEquals("{ 1 } -> X",pseudo.toString());
+        pseudo.enqueue(4);
+        pseudo.enqueue(5);
+        assertEquals(5,pseudo.stack1.peek());
+        assertEquals("{ 5 } -> { 4 } -> { 1 } -> X",pseudo.toString());
+        assertFalse(pseudo.stack1.isEmpty());
+    }
+
+    @Test
+    public void dequeueTest(){
+        pseudo.enqueue(7);
+        pseudo.enqueue(6);
+        pseudo.enqueue(5);
+        pseudo.enqueue(6);
+        assertEquals("{ 6 } -> { 5 } -> { 6 } -> { 7 } -> X",pseudo.toString());
+        pseudo.dequeue();
+        pseudo.dequeue();
+        pseudo.dequeue();
+        pseudo.dequeue();
+        pseudo.dequeue();
+        assertTrue(pseudo.stack1.isEmpty());
+        assertEquals("NUll",pseudo.toString());
+    }
+
 }

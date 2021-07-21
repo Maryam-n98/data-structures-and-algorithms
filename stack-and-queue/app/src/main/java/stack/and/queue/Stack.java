@@ -20,7 +20,7 @@ public class Stack<T> {
         if (top == null)
             System.out.println("Stack is Empty");
         else {
-            popElement = top.data;
+            popElement = (int) top.data;
             top = top.next;
         }
         size--;
@@ -33,7 +33,7 @@ public class Stack<T> {
             System.out.print(" empty stack ");
             return 0;
         } else
-            return top.data;
+            return (int) top.data;
     }
 
 
@@ -44,5 +44,21 @@ public class Stack<T> {
 
     public int getSize() {
         return size;
+    }
+
+    @Override
+    public String toString() {
+        Node temp = this.top;
+        StringBuilder output = new StringBuilder();
+        if (temp == null) {
+            return "NUll";
+        }
+        while (temp != null) {
+            output.append("{ ").append(temp.data).append(" } -> ");
+            temp = temp.next;
+        }
+        output.append("X");
+        return output.toString();
+
     }
 }
