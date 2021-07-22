@@ -2,14 +2,14 @@ package stack.and.queue;
 
 public class Queue <T>{
     int size =0;
-    public Node front, rear;
+    public  Node <T> front, rear;
 
     public Queue() {
         this.front = this.rear = null;
     }
 
-    public void enqueue(int value) {
-        Node newNode = new Node(value);
+    public void enqueue(T value) {
+        Node <T> newNode = new Node<T>(value);
 
         if (this.rear == null) {
             this.front = this.rear = newNode;
@@ -22,17 +22,17 @@ public class Queue <T>{
     }
 
 
-    public int dequeue() {
+    public T dequeue() {
         if (this.front == null) {
             System.out.println(" Queue is empty");
             size--;
-            return 0;
+            return null;
         } else {
-            Node temp = this.front;
+            Node  temp = this.front;
             this.front = this.front.next;
             temp.next = null;
             size--;
-            return (int) temp.data;
+            return (T) temp.data;
         }
     }
     public int peek() {
@@ -49,5 +49,16 @@ public class Queue <T>{
 
     public int getSize() {
         return size;
+    }
+    @Override
+    public String toString() {
+        String queueValue = "Queue { ";
+        Node trav = front;
+        while (trav != null){
+            queueValue += trav.data + " -> ";
+            trav = trav.next;
+        }
+        queueValue += "X }";
+        return queueValue;
     }
 }
