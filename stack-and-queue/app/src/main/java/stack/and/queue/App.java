@@ -3,12 +3,15 @@
  */
 package stack.and.queue;
 
+import org.checkerframework.checker.units.qual.A;
+
 public class App {
         private static final Stack<Integer> stack = new Stack<>();
         private static final Queue<Integer> queue = new Queue<>();
          private static final stackQueuePseudo<Integer> pseudoQueue = new stackQueuePseudo<>();
           private static final AnimalShelter AnimalSh = new AnimalShelter();
 
+          private static final stackQueueBrackets charLeft = new stackQueueBrackets();
 
     public static void main(String[] args) {
         System.out.println("Stack");
@@ -69,5 +72,25 @@ public class App {
         System.out.println(AnimalSh);
         AnimalSh.enqueue(new Cat("Bondo2"));
         System.out.println(AnimalSh);
+        System.out.println("  ");
+        System.out.println("  ");
+        System.out.println("  ");
+        System.out.println("Code Challenge 13");
+        System.out.println("   ");
+        //   Return True
+        System.out.println(charLeft.isBalanced("(){}"));
+        //        Return False
+        System.out.println(charLeft.isBalanced("()[{}"));
+        //        Return True
+        System.out.println(charLeft.isBalanced("[(){hii}]"));
+        //        Return True
+        System.out.println(charLeft.isBalanced("{({[]})}"));
+        //        Return True
+        System.out.println(charLeft.isBalanced(""));
+       //        Return False
+        System.out.println(charLeft.isBalanced(")"));
+//        Return False
+        System.out.println(charLeft.isBalanced("("));
+
     }
 }

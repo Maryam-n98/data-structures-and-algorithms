@@ -11,6 +11,8 @@ public class AppTest {
     private static final Queue<Integer> queue = new Queue<>();
     private static stackQueuePseudo<Integer> pseudo = new stackQueuePseudo<>();
     private static final AnimalShelter AnimalSh = new AnimalShelter();
+    private static final stackQueueBrackets charLeft = new stackQueueBrackets();
+
 
     @Test
     public void addStackTest() {
@@ -150,4 +152,23 @@ public class AppTest {
         AnimalSh.dequeue("Cat");
         assertTrue(AnimalSh.catQ.isEmpty());
     }
+//    This Test From Code Challenge 13
+    @Test
+    public void isBalance(){
+        assertTrue(charLeft.isBalanced("{}"));
+        assertTrue(charLeft.isBalanced("{}(){}"));
+        assertTrue(charLeft.isBalanced("()[[Extra Characters]]"));
+        assertTrue(charLeft.isBalanced("(){}[[]]"));
+        assertTrue(charLeft.isBalanced("{}{Code}[Fellows](())"));
+        assertFalse(charLeft.isBalanced("[({}]"));
+        assertFalse(charLeft.isBalanced("[({}]"));
+        assertFalse(charLeft.isBalanced("(]("));
+        assertFalse(charLeft.isBalanced("{(})"));
+        assertFalse(charLeft.isBalanced("{"));
+        assertFalse(charLeft.isBalanced(")"));
+        assertFalse(charLeft.isBalanced("("));
+        assertFalse(charLeft.isBalanced("["));
+
+    }
+
 }
