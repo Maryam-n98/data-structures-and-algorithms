@@ -6,7 +6,9 @@ package stack.and.queue;
 public class App {
         private static final Stack<Integer> stack = new Stack<>();
         private static final Queue<Integer> queue = new Queue<>();
-    private static final stackQueuePseudo<Integer> pseudoQueue = new stackQueuePseudo<>();
+         private static final stackQueuePseudo<Integer> pseudoQueue = new stackQueuePseudo<>();
+          private static final AnimalShelter AnimalSh = new AnimalShelter();
+
 
     public static void main(String[] args) {
         System.out.println("Stack");
@@ -31,7 +33,7 @@ public class App {
         System.out.println(queue.dequeue());
         System.out.println(queue.dequeue());
         System.out.println("is Empty: " + queue.isEmpty());
-// code challenge 11
+       // code challenge 11
         stack.push(1);
         System.out.println("Code Challenge 11");
 
@@ -43,12 +45,29 @@ public class App {
         System.out.println(pseudoQueue);
         System.out.println("dequeue "+pseudoQueue.dequeue());
         System.out.println("dequeue "+pseudoQueue.dequeue());
-
-
         System.out.println(pseudoQueue);
-
         pseudoQueue.enqueue(60);
         System.out.println(pseudoQueue);
 
+        //   Code Challenge 12
+        System.out.println("  ");
+        System.out.println("  ");
+        System.out.println("  ");
+        System.out.println("Code Challenge 12");
+        System.out.println("   ");
+      AnimalSh.enqueue(new Cat("Bondo2"));
+        AnimalSh.enqueue(new Cat("Mocha"));
+        AnimalSh.enqueue(new Cat("Dongol"));
+        AnimalSh.enqueue(new Dog("leo"));
+        AnimalSh.enqueue(new Dog("Toby"));
+        AnimalSh.enqueue(new Dog("Buddy"));
+        System.out.println(AnimalSh);
+        AnimalSh.dequeue("Dog");
+        System.out.println(AnimalSh);
+        AnimalSh.dequeue("Cat");
+        AnimalSh.dequeue("Cat");
+        System.out.println(AnimalSh);
+        AnimalSh.enqueue(new Cat("Bondo2"));
+        System.out.println(AnimalSh);
     }
 }

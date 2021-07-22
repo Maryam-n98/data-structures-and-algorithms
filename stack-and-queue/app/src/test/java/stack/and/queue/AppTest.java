@@ -10,6 +10,8 @@ public class AppTest {
     private static final Stack<Integer> stack = new Stack<>();
     private static final Queue<Integer> queue = new Queue<>();
     private static stackQueuePseudo<Integer> pseudo = new stackQueuePseudo<>();
+    private static final AnimalShelter AnimalSh = new AnimalShelter();
+
     @Test
     public void addStackTest() {
         stack.push(1);
@@ -90,4 +92,62 @@ public class AppTest {
         assertEquals("NUll",pseudo.toString());
     }
 
+
+//    This Test From Code Challenge 12
+
+    @Test
+    public void enqueueCats(){
+        AnimalSh.enqueue(new Cat("Bonbon"));
+        AnimalSh.enqueue(new Cat("Moca"));
+        AnimalSh.enqueue(new Cat("Dongol"));
+        assertEquals("CAT = Queue { Bonbon -> Moca -> Dongol -> X }, DOG = Queue { X } }",AnimalSh.toString());
+    }
+
+    @Test
+    public void enqueueDogs(){
+        AnimalSh.enqueue(new Dog("leo"));
+        AnimalSh.enqueue(new Dog("Losi"));
+        AnimalSh.enqueue(new Dog("Melo"));
+        assertEquals("CAT = Queue { X }, DOG = Queue { leo -> Losi -> Melo -> X } }",AnimalSh.toString());
+
+    }
+    @Test
+    public void dequeueCat(){
+        AnimalSh.enqueue(new Cat("Bonbon"));
+        AnimalSh.enqueue(new Cat("Moca"));
+        AnimalSh.enqueue(new Cat("Dongol"));
+        AnimalSh.dequeue("Cat");
+        assertEquals("CAT = Queue { Moca -> Dongol -> X }, DOG = Queue { X } }",AnimalSh.toString());
+    }
+
+    @Test
+    public void dequeueDogs(){
+        AnimalSh.enqueue(new Dog("leo"));
+        AnimalSh.enqueue(new Dog("Losi"));
+        AnimalSh.enqueue(new Dog("Melo"));
+        AnimalSh.dequeue("Dog");
+        assertEquals("CAT = Queue { X }, DOG = Queue { Losi -> Melo -> X } }",AnimalSh.toString());
+    }
+
+    @Test
+    public void emptyDog(){
+            AnimalSh.enqueue(new Dog("leo"));
+            AnimalSh.enqueue(new Dog("Losi"));
+            AnimalSh.enqueue(new Dog("Melo"));
+            AnimalSh.dequeue("Dog");
+            AnimalSh.dequeue("Dog");
+            AnimalSh.dequeue("Dog");
+            assertTrue(AnimalSh.dogQ.isEmpty());
+    }
+
+    @Test
+    public void emptyCat(){
+        AnimalSh.enqueue(new Cat("Bonbon"));
+        AnimalSh.enqueue(new Cat("Moca"));
+        AnimalSh.enqueue(new Cat("Dongol"));
+        AnimalSh.dequeue("Cat");
+        AnimalSh.dequeue("Cat");
+        AnimalSh.dequeue("Cat");
+        assertTrue(AnimalSh.catQ.isEmpty());
+    }
 }
