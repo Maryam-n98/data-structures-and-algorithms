@@ -25,5 +25,5 @@
 
 
  ###### In this code challenge, I worked with "Motasim Al Azzam" as a partner.      
- ###### I used in this code this video as a Reference:
+ ###### We used in this code this video as a Reference:
  [https://www.youtube.com/watch?v=CCyEXcNamC4&ab_channel=BackToBackSWE](https://www.youtube.com/watch?v=CCyEXcNamC4&ab_channel=BackToBackSWE)
