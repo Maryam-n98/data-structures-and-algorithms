@@ -27,6 +27,10 @@ public class App <T>{
         System.out.println("in order");
         tree.inorder();
         System.out.println(" ");
+        System.out.println(" ");
+
+        System.out.println("Maximum value: "+tree.findMax());
+        System.out.println("  ");
         BinarySearchTree tree1 = new BinarySearchTree();
         tree1.add(50);
         tree1.add(30);

@@ -20,9 +20,21 @@ public class BinaryTree<T> {
         System.out.print(node.key + " ");
         postOrderArr.add(node.key);
     }
-
-
-
+// CODE CHALLENGE 16
+    public int findMax() {
+        if(root == null){
+            System.out.println("this tree is Empty");
+            return 0;
+        }
+        int max = root.key;
+        preOrder(root);
+        for(int i = 0; i<preOrderArr.size(); i++){
+            if(max<preOrderArr.get(i)){
+                max = preOrderArr.get(i);
+            }
+        }
+        return max;
+    }
 
    public void postorder() {
         postorder(root);
@@ -46,7 +58,7 @@ public class BinaryTree<T> {
         if (node == null)
 
             return;
-        System.out.print(node.key + " ");
+//        System.out.print(node.key + " ");
         preOrderArr.add(node.key);
         preOrder(node.left);
         preOrder(node.right);
