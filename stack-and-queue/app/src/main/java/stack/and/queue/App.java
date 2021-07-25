@@ -91,6 +91,5 @@ public class App {
         System.out.println(charLeft.isBalanced(")"));
 //        Return False
         System.out.println(charLeft.isBalanced("("));
-
     }
 }
