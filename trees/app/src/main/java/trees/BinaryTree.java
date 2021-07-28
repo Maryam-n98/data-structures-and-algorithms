@@ -74,4 +74,25 @@ public class BinaryTree<T> {
                 "root=" + root +
                 '}';
     }
+// CODE CHALLENGE 19 INTERVIEW (2)
+    public int leafNumber() {
+        return leafNumber(root);
+    }
+
+    public static boolean CheckLeaf(BinaryTree tree1, BinaryTree tree2) {
+        int num1 = tree1.leafNumber();
+        int num2 = tree2.leafNumber();
+        return num1 == num2;
+    }
+
+    public int leafNumber(Node node) {
+        if (node == null)
+            return 0;
+        if (node.left == null && node.right == null)
+            return 1;
+        else
+            return leafNumber(node.left) + leafNumber(node.right);
+
+
+    }
 }
