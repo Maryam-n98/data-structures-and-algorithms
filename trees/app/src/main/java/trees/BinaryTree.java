@@ -74,6 +74,7 @@ public class BinaryTree<T> {
                 "root=" + root +
                 '}';
     }
+
 // CODE CHALLENGE 19 INTERVIEW (2)
     public int leafNumber() {
         return leafNumber(root);
@@ -92,6 +93,8 @@ public class BinaryTree<T> {
             return 1;
         else
             return leafNumber(node.left) + leafNumber(node.right);
+
+
 
 
     }
