@@ -2,12 +2,17 @@ package trees;
 
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class BinaryTree<T> {
     Node <T> root;
     public ArrayList<Integer> preOrderArr = new ArrayList<>();
     public ArrayList<Integer> inOrderArr = new ArrayList<>();
     public ArrayList<Integer> postOrderArr = new ArrayList<>();
+    public LinkedList<Node> linkedList = new LinkedList<>();
+    public  ArrayList<Integer> list = new ArrayList<>();
+
+
     public BinaryTree() {
         this.root = null;
     }
@@ -98,4 +103,23 @@ public class BinaryTree<T> {
 
 
     }
+
+    public ArrayList<Integer> breadthFirst(BinaryTree tree) {
+        if (root != null) {
+            linkedList.add(tree.root);
+            while (!linkedList.isEmpty()) {
+                Node node = linkedList.remove();
+                list.add(node.key);
+
+                if (node.left != null) {
+                    linkedList.add(node.left);
+                }
+                if (node.right != null) {
+                    linkedList.add(node.right);
+                }
+            }
+        }
+        return list;
+    }
+
 }

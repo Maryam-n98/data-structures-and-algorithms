@@ -77,6 +77,11 @@ public class App <T>{
         binaryTree1.root.right.left=new Node(8);
         binaryTree1.root.right.right=new Node(9);
 
-        System.out.println("CODE19: "+CheckLeaf(tree,binaryTree1));
+//        System.out.println("CODE19: "+CheckLeaf(tree,binaryTree1));
+//
+//        System.out.println("Binary search");
+
+        System.out.println( binaryTree1.breadthFirst(binaryTree1));
+
     }
 }
