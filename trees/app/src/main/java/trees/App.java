@@ -3,6 +3,8 @@
  */
 package trees;
 
+import trees.fizzBuzz.KAryTree;
+
 import static trees.BinaryTree.CheckLeaf;
 
 
@@ -59,29 +61,43 @@ public class App <T>{
 //        System.out.println(tree2.Contains( 90));
 
 // CODE CHALLENGE 19 INTERVIEW (2)
-        BinaryTree tree = new BinaryTree();
-        tree.root = new Node(1);
-        tree.root.left = new Node(2);
-        tree.root.right = new Node(3);
-        tree.root.left.left = new Node(4);
-        tree.root.left.right = new Node(5);
-        tree.root.right.left=new Node(8);
-        tree.root.right.right=new Node(9);
-
-        BinaryTree binaryTree1 = new BinaryTree();
-        binaryTree1.root =new Node(1);
-        binaryTree1.root.left =new Node(3);
-        binaryTree1.root.right= new Node(4);
-        binaryTree1.root.left.left=new Node(5);
-        binaryTree1.root.left.right=new Node(7);
-        binaryTree1.root.right.left=new Node(8);
-        binaryTree1.root.right.right=new Node(9);
+//        BinaryTree tree = new BinaryTree();
+//        tree.root = new Node(1);
+//        tree.root.left = new Node(2);
+//        tree.root.right = new Node(3);
+//        tree.root.left.left = new Node(4);
+//        tree.root.left.right = new Node(5);
+//        tree.root.right.left=new Node(8);
+//        tree.root.right.right=new Node(9);
+//
+//        BinaryTree binaryTree1 = new BinaryTree();
+//        binaryTree1.root =new Node(1);
+//        binaryTree1.root.left =new Node(3);
+//        binaryTree1.root.right= new Node(4);
+//        binaryTree1.root.left.left=new Node(5);
+//        binaryTree1.root.left.right=new Node(7);
+//        binaryTree1.root.right.left=new Node(8);
+//        binaryTree1.root.right.right=new Node(9);
 
 //        System.out.println("CODE19: "+CheckLeaf(tree,binaryTree1));
 //
 //        System.out.println("Binary search");
 
-        System.out.println( binaryTree1.breadthFirst(binaryTree1));
+//        System.out.println( binaryTree1.breadthFirst(binaryTree1));
+        KAryTree<Integer> t =new KAryTree(3);
+        t.add(1);
+        t.add(5);
+        t.add(15);
+        t.add(30);
+        t.add(7);
+        t.add(20);
+        t.add(8);
+        t.add(60);
+        t.add(3);
+        t.add(12);
+        System.out.println(t);
+
+        System.out.println(t.fizzBuzzTree(t));
 
     }
 }

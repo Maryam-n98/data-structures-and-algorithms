@@ -4,6 +4,8 @@
 package trees;
 
 import org.junit.jupiter.api.Test;
+import trees.fizzBuzz.KAryTree;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -125,4 +127,24 @@ class AppTest {
 
         assertEquals("[1, 190, 130, 4, 200]",String.valueOf(binaryTree.breadthFirst(binaryTree)));
     }
+    @Test
+    public void kTreeFizzBuzzTest(){
+
+        KAryTree kTree = new KAryTree(2);
+
+        kTree.add(1);
+        kTree.add(2);
+        assertEquals("{  1   2   }",kTree.fizzBuzzTree(kTree).toString() );
+
+        kTree.add(3);
+        assertEquals("{  1   2    Fizz   }", kTree.fizzBuzzTree(kTree).toString());
+
+        kTree.add(5);
+        assertEquals("{  1   2   Buzz     Fizz   }", kTree.fizzBuzzTree(kTree).toString());
+
+        kTree.add(15);
+        assertEquals("{  1   2   Buzz    FizzBuzz     Fizz   }", kTree.fizzBuzzTree(kTree).toString());
+
+    }
+
 }
