@@ -3,64 +3,85 @@
  */
 package trees;
 
+import static trees.BinaryTree.CheckLeaf;
+
+
 public class App <T>{
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
+
+//        System.out.println("post order");
+//
+//
+//        tree.postorder();
+//        System.out.println(" ");
+//        System.out.println("preorder");
+//        tree.preOrder();
+//        System.out.println(" ");
+//        System.out.println("in order");
+//        tree.inorder();
+//        System.out.println(" ");
+//        System.out.println(" ");
+//
+//        System.out.println("Maximum value: "+tree.findMax());
+//        System.out.println("  ");
+//        BinarySearchTree tree1 = new BinarySearchTree();
+//        tree1.add(50);
+//        tree1.add(30);
+//        tree1.add(20);
+//        tree1.add(40);
+//        tree1.add(70);
+//        tree1.add(60);
+//        tree1.add(80);
+//        System.out.println("BinarySearchTree: ");
+//        tree1.inorder();
+//        System.out.println(tree1.Contains( 20));
+//        BinarySearchTree tree2 = new BinarySearchTree();
+//
+//        tree2.add(50);
+//        tree2.add(30);
+//        tree2.add(20);
+//        tree2.add(40);
+//        tree2.add(60);
+//        tree2.add(80);
+//
+//        System.out.println(tree2.Contains( 60));
+//        BinarySearchTree tree3 = new BinarySearchTree();
+//        tree3.add(80);
+//        tree3.add(60);
+//        tree3.add(70);
+//        tree3.add(50);
+//        tree3.add(40);
+//        tree3.add(100);
+//        System.out.println(tree2.Contains( 90));
+
+// CODE CHALLENGE 19 INTERVIEW (2)
         BinaryTree tree = new BinaryTree();
         tree.root = new Node(1);
         tree.root.left = new Node(2);
         tree.root.right = new Node(3);
         tree.root.left.left = new Node(4);
         tree.root.left.right = new Node(5);
+        tree.root.right.left=new Node(8);
+        tree.root.right.right=new Node(9);
 
-        System.out.println("post order");
+        BinaryTree binaryTree1 = new BinaryTree();
+        binaryTree1.root =new Node(1);
+        binaryTree1.root.left =new Node(3);
+        binaryTree1.root.right= new Node(4);
+        binaryTree1.root.left.left=new Node(5);
+        binaryTree1.root.left.right=new Node(7);
+        binaryTree1.root.right.left=new Node(8);
+        binaryTree1.root.right.right=new Node(9);
 
+//        System.out.println("CODE19: "+CheckLeaf(tree,binaryTree1));
+//
+//        System.out.println("Binary search");
 
-        tree.postorder();
-        System.out.println(" ");
-        System.out.println("preorder");
-        tree.preOrder();
-        System.out.println(" ");
-        System.out.println("in order");
-        tree.inorder();
-        System.out.println(" ");
-        System.out.println(" ");
-
-        System.out.println("Maximum value: "+tree.findMax());
-        System.out.println("  ");
-        BinarySearchTree tree1 = new BinarySearchTree();
-        tree1.add(50);
-        tree1.add(30);
-        tree1.add(20);
-        tree1.add(40);
-        tree1.add(70);
-        tree1.add(60);
-        tree1.add(80);
-        System.out.println("BinarySearchTree: ");
-        tree1.inorder();
-        System.out.println(tree1.Contains( 20));
-        BinarySearchTree tree2 = new BinarySearchTree();
-
-        tree2.add(50);
-        tree2.add(30);
-        tree2.add(20);
-        tree2.add(40);
-        tree2.add(60);
-        tree2.add(80);
-
-        System.out.println(tree2.Contains( 60));
-        BinarySearchTree tree3 = new BinarySearchTree();
-        tree3.add(80);
-        tree3.add(60);
-        tree3.add(70);
-        tree3.add(50);
-        tree3.add(40);
-        tree3.add(100);
-        System.out.println(tree2.Contains( 90));
-
+        System.out.println( binaryTree1.breadthFirst(binaryTree1));
 
     }
 }

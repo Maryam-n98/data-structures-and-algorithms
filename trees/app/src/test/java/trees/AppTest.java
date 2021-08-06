@@ -113,4 +113,16 @@ class AppTest {
         assertEquals(13,tree3.findMax());
 
     }
+    @Test
+    public void breadthFirstTest() {
+        BinaryTree binaryTree = new BinaryTree();
+        binaryTree.root=new Node(1);
+        binaryTree.root.left=new Node(190);
+        binaryTree.root.right=new Node(130);
+        binaryTree.root.left.left=new Node(4);
+        binaryTree.root.left.right=new Node(200);
+
+
+        assertEquals("[1, 190, 130, 4, 200]",String.valueOf(binaryTree.breadthFirst(binaryTree)));
+    }
 }
