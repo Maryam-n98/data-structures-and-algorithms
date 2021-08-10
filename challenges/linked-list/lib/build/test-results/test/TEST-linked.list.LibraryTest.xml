@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="linked.list.LibraryTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-07-16T15:12:37" hostname="DESKTOP-S7PLQMF" time="0.095">
+  <properties/>
+  <testcase name="appendTest()" classname="linked.list.LibraryTest" time="0.043"/>
+  <testcase name="sizeOneOfLinkedList()" classname="linked.list.LibraryTest" time="0.004"/>
+  <testcase name="listTwoLargerThanListOne()" classname="linked.list.LibraryTest" time="0.026"/>
+  <testcase name="kthTest()" classname="linked.list.LibraryTest" time="0.003"/>
+  <testcase name="isEmptyTest()" classname="linked.list.LibraryTest" time="0.004"/>
+  <testcase name="insertBeforeAndAfterTest()" classname="linked.list.LibraryTest" time="0.003"/>
+  <testcase name="listOneLargerThanListTwo()" classname="linked.list.LibraryTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
