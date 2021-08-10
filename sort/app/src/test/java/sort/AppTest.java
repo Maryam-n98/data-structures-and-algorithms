@@ -21,4 +21,22 @@ class AppTest {
         app.sort(arr);
         assertEquals("[4, 8, 15, 16, 23, 42]", Arrays.toString(arr));
     }
+    @Test
+    public void sortTest1(){
+
+        int [] arr ={30, 20, 15, 14, 7, -5};
+        App app = new App();
+        app.sort(arr);
+        assertEquals("[-5, 7, 14, 15, 20, 30]", Arrays.toString(arr));
+
+    }
+
+    @Test
+    public void sortTest2(){
+        int [] arr = {2, 10, 2, 2, 1, 5};
+        App app = new App();
+        app.sort(arr);
+        assertEquals("[1, 2, 2, 2, 5, 10]", Arrays.toString(arr));
+
+    }
 }
