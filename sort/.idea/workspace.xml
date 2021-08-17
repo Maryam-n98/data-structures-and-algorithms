@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55837531-56ca-4994-80f6-1822a266e48e" name="Changes" comment="code challenge 27">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/sort/MergeSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/sort/MergeSortTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/sort/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/sort/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sort/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/sort/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/sort/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/sort/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/test/sort/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/test/sort/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,13 +61,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hashtable" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.MergeSortTest.mergeSortTest3">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sort.App" />
       <module name="sort.app.main" />
@@ -85,6 +77,21 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MergeSortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sort.app.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sort" />
+      <option name="MAIN_CLASS_NAME" value="sort.MergeSortTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -121,7 +128,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MergeSortTest.mergeSortTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MergeSortTest.mergeSortTest3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sort.app.test" />
       <extension name="coverage">
         <pattern>
@@ -131,23 +138,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="sort" />
       <option name="MAIN_CLASS_NAME" value="sort.MergeSortTest" />
-      <option name="METHOD_NAME" value="mergeSortTest2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MergeSortTest.mergeSortTest4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sort.app.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sort.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="sort" />
-      <option name="MAIN_CLASS_NAME" value="sort.MergeSortTest" />
-      <option name="METHOD_NAME" value="mergeSortTest4" />
+      <option name="METHOD_NAME" value="mergeSortTest3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -155,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MergeSortTest.mergeSortTest3" />
+        <item itemvalue="JUnit.MergeSortTest.mergeSortTest1" />
+        <item itemvalue="JUnit.MergeSortTest" />
         <item itemvalue="Application.App" />
         <item itemvalue="JUnit.MergeSortTest.mergeSortTest" />
-        <item itemvalue="JUnit.MergeSortTest.mergeSortTest2" />
-        <item itemvalue="JUnit.MergeSortTest.mergeSortTest1" />
-        <item itemvalue="JUnit.MergeSortTest.mergeSortTest4" />
       </list>
     </recent_temporary>
   </component>
@@ -172,6 +163,14 @@
       <option name="presentableId" value="Default" />
       <updated>1628603333387</updated>
     </task>
+    <task id="LOCAL-00001" summary="code challenge 27">
+      <created>1629215295144</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1629215295144</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
