@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55837531-56ca-4994-80f6-1822a266e48e" name="Changes" comment="">
+    <list default="true" id="55837531-56ca-4994-80f6-1822a266e48e" name="Changes" comment="code challenge 27">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/sort/MergeSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/sort/MergeSortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/sort/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/sort/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sort/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/sort/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/sort/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/sort/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +45,19 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1wXSE05IZptyzIqCtcNzTNPJS0O" />
@@ -52,7 +75,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
-  <component name="RunManager" selected="JUnit.AppTest.sortTest2">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sort.App" />
       <module name="sort.app.main" />
@@ -66,28 +89,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.insertionSortTest1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;sort.AppTest.insertionSortTest1&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":app:test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="AppTest.sortTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MergeSortTest.mergeSortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sort.app.test" />
       <extension name="coverage">
         <pattern>
@@ -96,14 +98,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="sort" />
-      <option name="MAIN_CLASS_NAME" value="sort.AppTest" />
-      <option name="METHOD_NAME" value="sortTest1" />
+      <option name="MAIN_CLASS_NAME" value="sort.MergeSortTest" />
+      <option name="METHOD_NAME" value="mergeSortTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.sortTest11" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MergeSortTest.mergeSortTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sort.app.test" />
       <extension name="coverage">
         <pattern>
@@ -112,14 +114,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="sort" />
-      <option name="MAIN_CLASS_NAME" value="sort.AppTest" />
-      <option name="METHOD_NAME" value="sortTest11" />
+      <option name="MAIN_CLASS_NAME" value="sort.MergeSortTest" />
+      <option name="METHOD_NAME" value="mergeSortTest1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.sortTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MergeSortTest.mergeSortTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sort.app.test" />
       <extension name="coverage">
         <pattern>
@@ -128,8 +130,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="sort" />
-      <option name="MAIN_CLASS_NAME" value="sort.AppTest" />
-      <option name="METHOD_NAME" value="sortTest2" />
+      <option name="MAIN_CLASS_NAME" value="sort.MergeSortTest" />
+      <option name="METHOD_NAME" value="mergeSortTest2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MergeSortTest.mergeSortTest4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sort.app.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sort" />
+      <option name="MAIN_CLASS_NAME" value="sort.MergeSortTest" />
+      <option name="METHOD_NAME" value="mergeSortTest4" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -137,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AppTest.sortTest2" />
-        <item itemvalue="JUnit.AppTest.sortTest1" />
-        <item itemvalue="JUnit.AppTest.sortTest11" />
-        <item itemvalue="Gradle.AppTest.insertionSortTest1" />
         <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.MergeSortTest.mergeSortTest" />
+        <item itemvalue="JUnit.MergeSortTest.mergeSortTest2" />
+        <item itemvalue="JUnit.MergeSortTest.mergeSortTest1" />
+        <item itemvalue="JUnit.MergeSortTest.mergeSortTest4" />
       </list>
     </recent_temporary>
   </component>
@@ -155,5 +173,21 @@
       <updated>1628603333387</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="code challenge 27" />
+    <option name="LAST_COMMIT_MESSAGE" value="code challenge 27" />
   </component>
 </project>

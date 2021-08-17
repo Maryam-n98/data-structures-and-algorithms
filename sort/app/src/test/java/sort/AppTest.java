@@ -14,6 +14,7 @@ class AppTest {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
+
     @Test
     public void sortTest(){
         int[] arr = {8, 4, 23, 42, 16, 15};
@@ -39,4 +40,5 @@ class AppTest {
         assertEquals("[1, 2, 2, 2, 5, 10]", Arrays.toString(arr));
 
     }
+
 }
