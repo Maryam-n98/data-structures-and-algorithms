@@ -22,6 +22,14 @@ public class App {
             System.out.println(num);
         }
         System.out.println(Arrays.toString(arr));
+
+
+        int [] merge = {8,4,23,42,16,15};
+        MergeSort mergeSort = new MergeSort();
+
+        mergeSort.mergeSort(merge);
+        System.out.println("Merge Array " + Arrays.toString(merge));
+
     }
 
    public void sort(int arr[]) {
