@@ -6,12 +6,23 @@ package sort;
 import java.util.Arrays;
 
 public class App {
+
+
+
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+
+//       Code Challenge 31
+        int[] quickSortArr = {20,18,12,8,5,-2};
+
+        QuickSort quickSort = new QuickSort();
+
+        quickSort.quickSort(quickSortArr,0,5);
+        System.out.println("Quick sort" + Arrays.toString(quickSortArr));
 
         int arr[] = { 8,4,23,42,16,15 };
 
@@ -45,4 +56,6 @@ public class App {
             arr[j + 1] = temp;
         }
     }
+
+
 }
