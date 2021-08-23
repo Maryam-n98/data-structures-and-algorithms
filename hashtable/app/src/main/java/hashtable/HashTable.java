@@ -208,4 +208,17 @@ public class HashTable<K, V> {
         }
 
     }
+    public static List<String> leftJoin(HashMap h, HashMap h1){
+
+        List<String> list = new ArrayList<>();
+        for(Object k : h.keySet()){
+            if(h.containsKey(k)){
+                list.add(k +  ": " + h.get(k)+ ", " + h1.get(k));
+            } else{
+                list.add(k + ": " + h.get(k) + ", " + null);
+            }
+        }
+
+        return list;
+    }
 }
