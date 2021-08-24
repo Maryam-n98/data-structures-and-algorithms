@@ -3,6 +3,9 @@
  */
 package graph;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -68,5 +71,32 @@ public class App {
         System.out.println();
         System.out.println("code challenge 36");
         System.out.println(graph1.bft("Pandora"));
+
+        Graph graph2 = new Graph();
+
+        graph2.addVertex("Pandora");
+        graph2.addVertex("Arendelle");
+        graph2.addVertex("Metroville");
+        graph2.addVertex("Monstroplolis");
+        graph2.addVertex("Narnia");
+        graph2.addVertex("Naboo");
+
+        graph2.addEdgeWithWeight("Pandora", "Arendelle", 150);
+        graph2.addEdgeWithWeight("Arendelle", "Metroville",99);
+        graph2.addEdgeWithWeight("Arendelle", "Monstroplolis",42);
+        graph2.addEdgeWithWeight("Metroville", "Narnia",37);
+        graph2.addEdgeWithWeight("Metroville", "Naboo",26);
+        graph2.addEdgeWithWeight("Metroville", "Monstroplolis",105);
+        graph2.addEdgeWithWeight("Monstroplolis", "Naboo",73);
+        graph2.addEdgeWithWeight("Narnia", "Naboo",250);
+
+        List<String> cities = new ArrayList<>();
+        cities.add("Pandora");
+        cities.add("Monstroplolis");
+        cities.add("Metroville");
+        System.out.println();
+        System.out.println("Code Challenge 37");
+        System.out.println(" Trip =>  "+graph2.businessTrip(graph2,cities));
+
     }
 }
