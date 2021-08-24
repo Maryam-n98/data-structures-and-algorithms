@@ -5,6 +5,10 @@ package graph;
 
 import org.checkerframework.checker.units.qual.A;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -122,5 +126,86 @@ class AppTest {
         graph1.addEdge("Pandora", "Metroville");
 
         assertEquals("[Pandora, Metroville]",graph1.bft("Pandora").toString());
+
     }
+    @Test
+    void  businessTripTest(){
+        Graph graph2 = new Graph();
+
+        graph2.addVertex("Pandora");
+        graph2.addVertex("Arendelle");
+        graph2.addVertex("Metroville");
+        graph2.addVertex("Monstroplolis");
+        graph2.addVertex("Narnia");
+        graph2.addVertex("Naboo");
+
+        graph2.addEdgeWithWeight("Pandora", "Arendelle", 150);
+        graph2.addEdgeWithWeight("Arendelle", "Metroville",99);
+        graph2.addEdgeWithWeight("Arendelle", "Monstroplolis",42);
+        graph2.addEdgeWithWeight("Metroville", "Narnia",37);
+        graph2.addEdgeWithWeight("Metroville", "Naboo",26);
+        graph2.addEdgeWithWeight("Metroville", "Monstroplolis",105);
+        graph2.addEdgeWithWeight("Monstroplolis", "Naboo",73);
+        graph2.addEdgeWithWeight("Narnia", "Naboo",250);
+
+        List<String> cities = new ArrayList<>();
+        cities.add("Pandora");
+        cities.add("Monstroplolis");
+        cities.add("Metroville");
+    assertEquals("105",graph2.businessTrip(graph2,cities).toString());
+    }
+    @Test
+    void noTrip(){
+        Graph graph2 = new Graph();
+
+        graph2.addVertex("Pandora");
+        graph2.addVertex("Arendelle");
+        graph2.addVertex("Metroville");
+        graph2.addVertex("Monstroplolis");
+        graph2.addVertex("Narnia");
+        graph2.addVertex("Naboo");
+
+        graph2.addEdgeWithWeight("Pandora", "Arendelle", 150);
+        graph2.addEdgeWithWeight("Arendelle", "Metroville",99);
+        graph2.addEdgeWithWeight("Arendelle", "Monstroplolis",42);
+        graph2.addEdgeWithWeight("Metroville", "Narnia",37);
+        graph2.addEdgeWithWeight("Metroville", "Naboo",26);
+        graph2.addEdgeWithWeight("Metroville", "Monstroplolis",105);
+        graph2.addEdgeWithWeight("Monstroplolis", "Naboo",73);
+        graph2.addEdgeWithWeight("Narnia", "Naboo",250);
+
+        List<String> cities = new ArrayList<>();
+        cities.add("Pandora");
+        cities.add("Naboo");
+        assertEquals("0",graph2.businessTrip(graph2,cities).toString());
+
+    }
+    @Test
+    void TripBetweenTow(){
+        Graph graph2 = new Graph();
+
+        graph2.addVertex("Pandora");
+        graph2.addVertex("Arendelle");
+        graph2.addVertex("Metroville");
+        graph2.addVertex("Monstroplolis");
+        graph2.addVertex("Narnia");
+        graph2.addVertex("Naboo");
+
+        graph2.addEdgeWithWeight("Pandora", "Arendelle", 150);
+        graph2.addEdgeWithWeight("Arendelle", "Metroville",99);
+        graph2.addEdgeWithWeight("Arendelle", "Monstroplolis",42);
+        graph2.addEdgeWithWeight("Metroville", "Narnia",37);
+        graph2.addEdgeWithWeight("Metroville", "Naboo",26);
+        graph2.addEdgeWithWeight("Metroville", "Monstroplolis",105);
+        graph2.addEdgeWithWeight("Monstroplolis", "Naboo",73);
+        graph2.addEdgeWithWeight("Narnia", "Naboo",250);
+        List<String> cities = new ArrayList<>();
+        cities.add("Pandora");
+        cities.add("Arendelle");
+        cities.add("Naboo");
+        assertEquals("150",graph2.businessTrip(graph2,cities).toString());
+
+
+    }
+
 }
