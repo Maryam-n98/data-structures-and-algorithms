@@ -75,4 +75,52 @@ class AppTest {
 
         assertEquals("Vertex{data='Lio'}[]",graph.printGraph());
     }
+    @Test
+    public void breathFirst(){
+        Graph graph1 = new Graph();
+
+        graph1.addVertex("Pandora");
+        graph1.addVertex("Arendelle");
+        graph1.addVertex("Metroville");
+        graph1.addVertex("Monstroplolis");
+        graph1.addVertex("Narnia");
+        graph1.addVertex("Naboo");
+
+        graph1.addEdge("Pandora", "Arendelle");
+        graph1.addEdge("Arendelle", "Metroville");
+        graph1.addEdge("Arendelle", "Monstroplolis");
+        graph1.addEdge("Metroville", "Narnia");
+        graph1.addEdge("Metroville", "Naboo");
+        graph1.addEdge("Metroville", "Monstroplolis");
+        graph1.addEdge("Monstroplolis", "Naboo");
+        graph1.addEdge("Narnia", "Naboo");
+
+        assertEquals("[Pandora, Arendelle, Metroville, Monstroplolis, Narnia, Naboo]",graph1.bft( "Pandora").toString());
+    }
+    @Test
+    public void oneVertex(){
+        Graph graph1 = new Graph();
+
+        graph1.addVertex("Pandora");
+        assertEquals("[Pandora]",graph1.bft("Pandora").toString());
+    }
+    @Test
+    void NotEmpty(){
+        Graph graph1 = new Graph();
+        graph1.addVertex("Pandora");
+        assertNotNull("[Pandora]",graph1.bft("Pandora").toString());
+    }
+    @Test
+    public void notAllVertexHaveEdge(){
+
+        Graph graph1 = new Graph();
+
+        graph1.addVertex("Pandora");
+        graph1.addVertex("Arendelle");
+        graph1.addVertex("Metroville");
+
+        graph1.addEdge("Pandora", "Metroville");
+
+        assertEquals("[Pandora, Metroville]",graph1.bft("Pandora").toString());
+    }
 }
