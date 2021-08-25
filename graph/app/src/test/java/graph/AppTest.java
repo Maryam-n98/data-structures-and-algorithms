@@ -207,5 +207,48 @@ class AppTest {
 
 
     }
+    @Test
+    void depthFirst(){
+        Graph graph38 = new Graph();
 
+        graph38.addVertex("A");
+        graph38.addVertex("B");
+        graph38.addVertex("C");
+        graph38.addVertex("D");
+        graph38.addVertex("E");
+        graph38.addVertex("F");
+        graph38.addVertex("G");
+        graph38.addVertex("H");
+
+        graph38.addEdge("A", "D");
+        graph38.addEdge("A", "B");
+        graph38.addEdge("B", "D");
+        graph38.addEdge("B", "C");
+        graph38.addEdge("C", "G");
+        graph38.addEdge("D", "F");
+        graph38.addEdge("D", "H");
+        graph38.addEdge("D", "E");
+        graph38.addEdge("F", "H");
+        assertEquals("[A, B, C, G, D, E, H, F]",graph38.dft("A").toString());
+    }
+
+    @Test
+    void noEdge(){
+        Graph graph38 = new Graph();
+
+        graph38.addVertex("A");
+        graph38.addVertex("B");
+        graph38.addVertex("C");
+        graph38.addVertex("D");
+        graph38.addEdge("A", "D");
+        graph38.addEdge("A", "B");
+        graph38.addEdge("B", "D");
+        assertEquals("[A, B, D]",graph38.dft("A").toString());
+    }
+    @Test
+    void oneVertexTest(){
+        Graph graph38 = new Graph();
+        graph38.addVertex("A");
+        assertEquals("[A]",graph38.dft("A").toString());
+    }
 }

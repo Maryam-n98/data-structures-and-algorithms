@@ -59,7 +59,7 @@ public class Graph {
         return adjVertices.size();
     }
 
-    Set<String> dft(Graph graph, String root) {
+    Set<String> dft( String root) {
         Set<String> visited = new LinkedHashSet<>();
         Stack<String> stack = new Stack<>();
         stack.push(root);
@@ -69,7 +69,7 @@ public class Graph {
             if (!visited.contains(vertex)) {
                 visited.add(vertex);
 
-                for (Vertex v : graph.getNeighbors(vertex)) {
+                for (Vertex v : getNeighbors(vertex)) {
                     stack.push(v.data);
                 }
             }
