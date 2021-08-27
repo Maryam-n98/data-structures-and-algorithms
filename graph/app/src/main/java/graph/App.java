@@ -98,5 +98,29 @@ public class App {
         System.out.println("Code Challenge 37");
         System.out.println(" Trip =>  "+graph2.businessTrip(graph2,cities));
 
+        Graph graph38 = new Graph();
+
+        graph38.addVertex("A");
+        graph38.addVertex("B");
+        graph38.addVertex("C");
+        graph38.addVertex("D");
+        graph38.addVertex("E");
+        graph38.addVertex("F");
+        graph38.addVertex("G");
+        graph38.addVertex("H");
+
+        graph38.addEdge("A", "D");
+        graph38.addEdge("A", "B");
+        graph38.addEdge("B", "D");
+        graph38.addEdge("B", "C");
+        graph38.addEdge("C", "G");
+        graph38.addEdge("D", "F");
+        graph38.addEdge("D", "H");
+        graph38.addEdge("D", "E");
+        graph38.addEdge("F", "H");
+        System.out.println();
+        System.out.println();
+
+        System.out.println("Graph Depth First =>  " + graph38.dft("A"));
     }
 }
